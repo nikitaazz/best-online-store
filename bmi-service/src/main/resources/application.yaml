@@ -5,9 +5,8 @@ spring:
     name: bmi-service
   ai:
     openai:
-      api-key: ${API_KEY}
-      base-url: ${API_MODEL}
+      api-key: ${GROQ_API_KEY}
+      base-url: "https://api.groq.com/openai"
       chat:
         options:
-          model: ${API_MODEL}
-
+          model: "llama3-70b-8192"

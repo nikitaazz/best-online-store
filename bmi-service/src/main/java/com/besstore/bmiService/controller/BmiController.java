@@ -13,6 +13,10 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+/**
+ * Controller for handling BMI calculations.
+ * This controller provides an endpoint to calculate BMI based on user input.
+ */
 @RestController
 @RequestMapping("/api/v1/bmi")
 @RequiredArgsConstructor

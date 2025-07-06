@@ -3,13 +3,23 @@ package com.besstore.bmiService.bmiInterprete;
 import com.besstore.bmiService.constatnts.Gender;
 import lombok.experimental.UtilityClass;
 
+/**
+ *  Chooses appropriate class to analyze BMI.
+ *  Uses Factory Design Pattern.
+ *  AGE GENDER is required.
+ */
 @UtilityClass
 public class BmiInterpreterFactory {
 
+    /**
+     * Chooses appropriate class to analyze BMI.
+     * @param gender - gender of person who is calculating BMI
+     * @param age - age of person who is calculating BMI
+     * @return
+     */
     public InterpreterBMI getInterpreter(Gender gender, int age) {
-
         if (age < 20) {
-            if (gender == Gender.MALE) {
+            if (gender == Gender.FEMALE) { // here was written MALE I think it was a mistake I have changed it
                 return new TeenGirlBmiInterpreterBMI();
             } else {
                 return new TeenBoyBmiInterpreterBMI();
