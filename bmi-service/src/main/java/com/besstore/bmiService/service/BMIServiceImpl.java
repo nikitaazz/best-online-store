@@ -81,7 +81,7 @@ public class BMIServiceImpl implements BMIService {
 
         return parseList(result);
     }
-    
+
 
     /**
      * Parses the AI response into a list of recommendations.
