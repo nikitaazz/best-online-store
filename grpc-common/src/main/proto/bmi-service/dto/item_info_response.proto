@@ -1,0 +1,12 @@
+syntax = "proto3";
+
+package dto;
+option java_package = "com.bestStore";
+option java_multiple_files = true;
+
+
+message ItemInfoResponse {
+  List<String> id = 1;
+  List<String> name = 2;
+  List<String> ImageUrl = 3;
+}

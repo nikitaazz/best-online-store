@@ -7,6 +7,7 @@ import com.besstore.bmiService.dto.BmiRequest;
 import com.besstore.bmiService.dto.BmiResponse;
 import com.besstore.bmiService.model.Item;
 import com.besstore.bmiService.utils.BmiCalculator;
+import com.besstore.bmiService.utils.CaloriesBMI;
 import com.besstore.bmiService.utils.HealthRiskCalculator;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
@@ -53,6 +54,8 @@ public class BMIServiceImpl implements BMIService {
 
         String healthRisk = HealthRiskCalculator.calculateHealthRisk(bmiCategory);
         log.info("Health conditions: {}", healthRisk);
+
+        int calories = CaloriesBMI.getCaloriesByBMI(bmiCategory);
 
 //        List<Item> recItems =
 
