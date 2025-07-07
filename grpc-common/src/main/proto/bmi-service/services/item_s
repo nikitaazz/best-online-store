@@ -1,11 +1,12 @@
 syntax = "proto3";
 
-package dto;
-option java_package = "com.bestStore";
+package bmi.service;
+option java_package = "com.bmi.dto";
 option java_multiple_files = true;
 
-import "bmi-service/dto/item_info.proto";
+import "bmi-service/dto/item_info_request.proto";
+import "bmi-service/dto/item_info_response.proto";
 
 service ItemService {
-  rpc GetRecomendedItems (dto.item_info_request) returns (dto.item_info_response);
+  rpc GetRecomendedItems (bmi.dto.ItemInfoRequest) returns (bmi.dto.ItemInfoResponse);
 }
